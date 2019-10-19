@@ -1,0 +1,938 @@
+@import "var";
+@import "./charts";
+
+
+@font-face {
+  font-family: "Elegant_Icons";
+	src: 
+		url(../fonts/elegant_font/ElegantIcons.eot),
+    url(../fonts/elegant_font/ElegantIcons.woff),
+    url(../fonts/elegant_font/ElegantIcons.ttf),
+    url(../fonts/elegant_font/ElegantIcons.svg);
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icons {
+  font-family: "Elegant_Icons", sans-serif;
+}
+
+html, body{
+	margin: 0 auto;
+	height:100%;
+	background-color: $bodyColor;
+}
+
+.fillBackground{
+	background-color:$fillBackground;
+	width: 100%;
+}
+
+.fillBackgroundDarker{
+	background-color:$fillDarker;;
+	width: 100%;
+}
+
+.controledWidth {
+  @media (min-width: 1600px) {
+    max-width: 1250px;
+  }
+}
+
+.headerPart{
+	.headerBackground{
+		background-color:$fillBackground;
+	}
+	.sloganCntainer{
+		background: $fillBackground;
+		margin-top: 8em;
+		margin-bottom: 8em;
+	}
+	.textBackground{
+		background-color: $darkText;
+		display: inline-block;
+		margin: auto;
+		padding-left: 6px;
+		padding-right: 6px;
+		line-height: 2em;
+	}
+	.startDoing{
+		margin-top: 2em;
+	}
+}
+
+.navbar{
+	.navButtonsItem{
+		font-size: 0.9em;
+		font-weight: bold;
+		color: #606060 !important;
+		margin-right: 1em;	
+		&:hover {
+			background-color: $emerald !important;
+			color: white !important;
+			}	
+	}
+	.navButtonsItemActive{
+		background-color: $emerald;
+	}
+	.fas{
+		color: $emerald;
+	}
+	.collapse{
+		margin-top: 2em;
+		margin-bottom: 2em;
+	}
+}
+
+.offer{
+	.panelContentHeader{
+		margin-top: 2em;
+	}
+	.jumbotron{
+		background-color: $bodyColor;		
+		&:hover {
+			.icons {
+				background: $emerald;
+			}
+		}		
+	}
+	  .icons {
+    color: white;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    line-height: 2.6em;
+    background:  $darkText;
+    height: 100px;
+    width: 100px;
+    margin: 0 auto 2rem auto;
+    transition: 0.5s ease;
+	}
+	.corected{
+		padding-right: 0.2em;
+	}
+	.btn-outline-secondary{
+		&:hover {
+			background-color: $emerald !important;
+		}
+	}
+	.aKey{
+		display: block;
+		position: absolute;
+		left: 50%;
+		transform: translateY(-50%) translateX(-50%);
+	}
+
+}
+
+.tablets{
+	.media{
+		margin-top: 2.5em;
+    .icons {
+      font-size: 2.5em;
+      color: $emerald;
+      text-align: center;
+    }		
+	}
+}
+
+@media (max-width: 1400px) {
+	.tablets{
+		.media{
+			margin-left: 7%;
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.tablets{
+		.media{
+			margin-top: 1.2em;
+			margin-left: 0%;
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+	.tablets{
+		.media{
+			margin-top: 1.2em;
+			margin-left: 10%;
+		}
+	}
+}
+
+.featuresList{
+	background-color: $bodyColor;	
+	.row{
+		margin: 0 auto;
+		.media{
+			margin-top: 2.5em;
+			margin-bottom: 2.5em;
+	
+		}
+	}
+
+	.icons {
+		text-align: center;
+		font-size: 1.4em;
+		width: 2em;
+		color: white;
+		background: $fillDarker;
+		padding-top: 0.65em;
+		border-radius: 4px;
+		border-bottom: 0.6em solid $fillDarker;
+		position: relative;
+		transition: 0.5s ease;
+		&:before {
+			content: "";
+			position: absolute;
+			bottom: -1em;
+			left: 0;
+		  width: 51%;
+			height: 0;
+			border-bottom: 1em solid $emerald;
+			transform: skewY(35deg);
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: -1em;
+			right: 0;
+			width: 51%;
+			height: 0;
+			border-bottom: 1em solid $emerald;
+			transform: skewY(-35deg);
+		}
+	}		
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+	.featuresList{
+		.row{
+			margin: 0 auto;
+			width: 100%;
+		}
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1399.98px){
+.featuresList{
+	.row{
+		margin: 0 auto;
+		width: 100%;
+	}
+}
+}
+
+.skils{
+	.charts{
+		margin: 0 auto;
+	}
+	.chartMarginBottom{
+		margin-bottom: 2.5em;
+	}	
+  .progress + p {
+    text-transform: uppercase;
+    margin-top: 1.2rem;
+    font-weight: 700;
+  }	
+}
+
+@media (max-width: 767.98px) {
+	.skils{
+		.charts{
+			width: 100%;
+		}
+	}
+}
+
+.samples{
+	.aSample{
+		height: 15em;
+		background-color: $fillBackground;
+		&:hover {
+			.aSampleActive {
+				opacity: 1;
+			}
+		}				
+	}
+
+	.aSmallGap{
+		padding: 0.1em 0.1em 0.1em 0.1em;
+	}
+	.aCustomButton{
+		margin-top: 2em;
+		background-color: $emerald;
+	}
+	.col-12{
+		padding: 0;
+	}
+	.aSampleActive {
+		height: 100%;
+		width: 100%;
+		opacity: 0;
+		transition: 0.5s ease;
+		background-color: $emerald;
+		.container-fluid {
+			position: absolute;
+			width: 100%;
+			top: 50%;
+			transform: translateY(-50%);		
+		}	
+		.text-center {			
+			color: white;
+		}
+		a {
+			display: inline-block;
+			color: $emerald;
+			background-color: white;
+			width: 1.8em;
+			height: 1.8em;
+			border-radius: 5px;
+			text-decoration: none;
+			font-size: 1em;
+			transform: rotate(45deg);
+			&:hover {
+				color: white;
+				background-color: $fillDarker;
+			}
+			span {
+				display: inline-block;
+				padding: 0.2em;
+				transform: rotate(-45deg);
+			}
+		}
+		h4{
+			margin-top: 1em;
+		}
+
+	}
+}
+
+.facts{
+	.count{
+		font-size: 5em;
+		font-style: italic;
+		color: white;
+		&:before {
+			content: "";
+			position: absolute;
+			top: 27%;
+			left: 17%;
+			height: 0.7rem;
+			width: 0.7rem;
+			display: inline-block;
+			background: $fillBackground;
+			transform: rotate(45deg);
+			border-radius: 2px;
+			transition: 0.5s ease;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			top: 27%;
+			right: 17%;
+			height: 0.7rem;
+			width: 0.7rem;
+			display: inline-block;
+			background: $fillBackground;
+			transform: rotate(45deg);
+			border-radius: 2px;
+			transition: 0.5s ease;
+		}		
+	}
+	.icons {
+    color: $emerald;
+		font-size: 2em;
+		&:before {
+			content: "";
+			position: absolute;
+			top: 66%;
+			left: 2%;
+			height: 0;
+			width: 39%;
+			border-bottom: 1px solid $fillBackground;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			top: 66%;
+			right: 2%;
+			height: 0;
+			width: 39%;
+			border-bottom: 1px solid $fillBackground;
+		}		
+	}	
+	.aFact{
+		&:hover {
+			.count {
+				&:before {
+					background: $emerald;
+				}
+				&:after {
+					background: $emerald;
+				}
+			}
+		}
+	}
+	.small{
+		font-size: 0.7em;
+	}
+
+}
+
+.purchace{
+	background-color: $emerald;
+	text-transform: uppercase;
+	.aText{
+		margin-top: 1.4em;
+	}
+	.btn{
+		margin-top: 1em;
+  	background-color: #e4e4e4 !important;
+  &:hover {
+    background-color: $fillBackground !important;
+		}
+	}
+	.endline{
+		margin-top: 1em;
+	}
+}
+
+.team{
+	.gallery-arrows {
+		display: inline-block;
+		margin: 0 1rem;		
+	}
+	.icons {			
+		padding: 0 0.2em;
+	}
+	.caruselArrows {
+    position: absolute;
+    top: 0;
+		background: $emerald;
+		width: 1.4em;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.5em;
+    z-index: 1;
+    &:hover {
+      background: $darkText;
+      cursor: pointer;
+    }
+    &:first-of-type {
+      left: 0;
+    }
+    &:last-of-type {
+      right: 0;
+    }
+  }
+
+	.card {
+		border-radius: 5px;
+		margin-top: 0.5rem;
+		overflow: hidden;
+		border: 1px solid $lightGrey;
+		align-items: center;
+
+		.image-container {
+			height: 270px;
+			margin: 0;
+		}
+		.card-header {
+			background-color: transparent;
+			border: none;
+			padding: 0;
+			margin: 0;
+			margin-bottom: -0.25rem;
+
+			p {
+				background-color: $emerald;
+				border-radius: 5px;
+				color: white; 
+				font-weight: 700; 
+				text-transform: uppercase;
+				margin: 0;
+				padding: 0.6rem 1rem;
+				font-size: 0.9rem;
+				transform: translateY(-50%);
+			}
+		}
+		.card-body {
+			padding: 0 0 1rem 0;
+			margin-top: 0;
+			border-bottom: 1px solid $lightGrey;
+			p {
+				font-size: 0.85rem;
+				color: $darkText !important;
+				line-height: 1.5rem;
+			}
+		}
+		.card-footer {
+			background-color: transparent;
+			border: none;
+			.card-link{
+				text-align: center;
+			}
+			a {
+				display: block;
+				color: $lightGrey;
+				font-size: 0.9rem;
+				margin-bottom: 1rem;
+				span {
+					padding-right: 1rem;
+					font-size: 1rem;
+				}
+				&:hover {
+					color: $emerald;
+					font-weight: 500;
+					span {
+						color: $lightGrey;
+					}
+				}
+			}
+			& :last-child {
+				margin-bottom: 0;
+			}
+		}
+		&:hover {
+			.card-header {
+				p {
+					background-color: $darkText;
+				}
+			}
+		}
+	}
+}
+
+.contactDetails {
+	.aBackground{
+		background-color: $emerald;	
+	}
+  .container {
+		background-color: $emerald !important;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 2rem;
+	}	
+	.contact {
+		border-radius: 5px;
+		overflow: hidden;
+		background-color: white;
+		display: inline-block;
+		padding: 0.6em 0.9em;
+		margin-top: 5em;
+		margin-bottom: 1em;
+	}
+	p {
+		display: inline;		
+	}
+	.aFirst{
+		color: $emerald;
+		text-transform: uppercase;
+		font-size: 0.9em;
+		font-weight: bold;
+	}
+	.aSecond{
+		color: $lightGrey;
+		font-size: 0.9em;
+		font-style: italic;
+	}  
+	.aQuote{
+		color: white;
+		font-size: 1.5em;
+	}	
+	.caruselArrows {
+    position: absolute;
+    top: 0;
+		background: $emerald;
+		width: 1.4em;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.5em;
+    z-index: 1;
+    &:hover {
+      background: $darkText;
+      cursor: pointer;
+    }
+    &:first-of-type {
+      left: 0;
+    }
+    &:last-of-type {
+      right: 0;
+    }
+	}	
+	
+	.caruselArrows {
+		display: inline-block;
+    position: relative;
+		margin: 1.5rem auto;
+		top: 0;
+		background: white;
+		width: 1.4em;
+    color: $emerald;
+    border-radius: 5px;
+    font-size: 1.5em;
+		z-index: 1;
+		&:hover {
+			background-color: $darkText;
+			color: white;
+		}
+  }
+}
+
+.clients {
+	.aBackground{
+		background-color: $fillDarker;	
+	}
+  .container {
+		background-color: $fillDarker !important;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 2rem;
+	}	
+	.logo{
+		background-color: $darkText;
+		margin-top: 5em;
+		text-align: center;
+		height: 150px;
+		position: relative;
+		img{
+			max-height: 100%;
+			max-width: 100%;
+			width: auto;
+			height: auto;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+	}
+	
+	.caruselArrows {
+		display: inline-block;
+    position: relative;
+		margin: 1.5rem auto;
+		top: 0;
+		background: white;
+		width: 1.4em;
+    color: $emerald;
+    border-radius: 5px;
+    font-size: 1.5em;
+		z-index: 1;
+		&:hover {
+			background-color: $emerald;
+			color: white;
+		}
+  }
+}
+
+
+.prices{
+	.card {
+		border-radius: 5px;
+		margin-top: 0.5rem;
+		border: 1px solid $lightGrey;
+		align-items: center;
+
+		.image-container {
+			height: 270px;
+			margin: 0;
+		}
+		.card-header {
+			background-color: transparent;
+			border: none;
+			padding: 0;
+			margin: 0;
+			margin-bottom: -0.25rem;			
+
+			p {
+				background-color: $darkText;
+				border-radius: 5px;
+				color: white; 
+				font-weight: 700; 
+				text-transform: uppercase;
+				margin: 0;
+				padding: 0.6rem 1rem;
+				font-size: 0.9rem;
+				transform: translateY(-50%);
+			}
+		}
+		.card-body {
+			padding: 0 0 1rem 0;
+			margin-top: 0;
+			border-bottom: 1px solid $lightGrey;
+			p {
+				font-size: 0.85rem;
+				color: $darkText !important;
+				line-height: 1.5rem;
+			}
+		}
+		.card-footer {
+			background-color: transparent;
+			border: none;
+			p {
+				background-color: $emerald;
+				border-radius: 5px;
+				color: white; 
+				font-weight: 700; 
+				text-transform: uppercase;
+				margin: 0;
+				padding: 0.6rem 1rem;
+				font-size: 0.9rem;
+			}			
+		}
+		&:hover {
+			.card-header {
+				p {
+					background-color: $emerald;
+				}
+			}
+		}
+	}
+}
+
+.unique {	
+	.aBackground{		
+		background-color: $lightGrey;
+		padding-top: 5em;
+		padding-bottom: 5em;
+	}
+  p {
+    font-size: 2rem;
+    font-weight: 700;
+		color: $darkText !important;
+		margin-bottom: 1em;
+    .icons {
+      color: $emerald;
+      margin: 0 5px 0 5px;
+    }
+  }
+  .btn-success {
+		font-size: 0.85em;
+		font-weight: 700; 
+		text-transform: uppercase;
+		padding: 0.7em 1em;
+		background-color: $emerald;
+		border-color: $emerald;
+    .icon {
+      margin-left: 0.5em;
+    }
+	}	
+}
+
+.links{
+	.customMargin{
+		margin-top: 2em;
+	}
+	.customMarginBottom{
+		margin-bottom: 5em;
+	}
+	.btn{
+		background-color: $darkText !important;
+		border-color: $lightGrey !important;
+		color: white !important;
+	
+		&:hover {
+			background-color: $emerald !important;
+			border-color: $emerald !important;
+			color: white !important;
+		}
+	}
+}
+
+.map{
+	
+	.container-fluid{
+		padding: 0;
+		position: relative;
+	}
+	.contact{
+		width: 22em;
+		position: absolute;
+		top: 30px;
+		margin-left: 25%;
+	}
+
+  form {
+    background-color: white;
+    border-radius: 5px;
+    padding: 1.5rem;
+    border: 1px solid $lightGrey;
+
+    input, textarea, input::placeholder, textarea::placeholder {
+      font-size: 0.9rem;
+      font-style: italic;
+    }
+    input, input::placeholder {
+      padding: 1.5rem 0.7rem;
+      margin-bottom: 1rem;
+    }
+
+		.btn{
+			background-color: $emerald !important;
+			border-color: $emerald !important;
+			color: white !important;
+		
+			&:hover {
+				background-color: $darkText !important;
+				border-color: $darkText !important;
+				color: white !important;
+			}
+		}
+  }
+	iframe{  
+		height:500px;
+		width:100%;
+		position: relative;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.map{
+		.contact{
+			width: 100%;
+			margin-left: 0%;
+		}
+	}
+}
+
+footer{
+	.container-fluid{
+		background:#383838;
+		height: 10em;
+	}
+	p{
+		margin-top: auto;
+		margin-bottom: auto;
+		color: white;
+	}
+}
+
+.card {
+  background: transparent;
+  border: none;
+
+  .image-container {
+    position: relative;
+    height: 250px;
+
+    overflow: hidden;
+    margin: 1px;
+
+    .image {
+      display: block;
+      background: $darkText;
+      min-width: 100%;
+      min-height: 100%;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: 0.5s ease;
+      background-color: $emerald;
+
+      .content {
+				position: absolute;
+				margin-left: 23%;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      h4 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: white;
+        margin-top: 3rem;
+      }
+
+      p {
+        font-size: 0.8rem;
+        color: white !important;
+        margin-bottom: 0.5rem;
+
+        .icon {
+          margin-right: 0.5rem;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      a {
+        display: inline-block;
+        color: $emerald;
+        background-color: white;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transform: rotate(45deg);
+
+        &:hover {
+          position: relative;
+          color: white;
+          background-color: $darkText;
+          z-index: 1;
+        }
+
+        span {
+          display: inline-block;
+          padding: 0.2rem;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+    &:hover {
+      .overlay {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.customMargin{
+	margin-top: 5em;
+}
+
+.customMarginBottom{
+	margin-bottom: 5em;
+}
+
+.iconTest{
+	overflow: hidden;
+}
+
+.customIcon{
+	margin-top: 10px;
+}
+
+.customIconBullets{
+	margin-bottom: 10px;
+}
+
+.coloredText{
+	color: $emerald !important;
+}
+
+.darBacground{
+	background-color: $fillDarker;
+}
+
+.aLuggage{
+	display: block;
+	position: absolute;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	z-index: 2;
+}

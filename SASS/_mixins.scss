@@ -1,0 +1,7 @@
+@mixin myParagraph($color, $height){
+	p{
+		color: $color;
+		line-height: $height;
+		margin: 0 auto;
+	}
+}
